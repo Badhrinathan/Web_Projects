@@ -1,0 +1,548 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --purple:rgb(51,53,69);
+    --darkblue:rgb(34,37,57);
+    --white:rgb(201, 204, 222);
+}
+/*Header*/
+.srchbar{
+    background-color: var(--purple);
+    display: flex;  
+    align-items: center;
+    padding: 10px 18px;
+    color: aliceblue;
+    width:100%;
+    height:63.99px;
+    justify-content: space-between;
+}
+.srchbar div{
+    display: flex;
+}
+.srchbar #one img{
+    margin-left: 30.44px;
+
+} 
+.srchbar #two{
+    margin-left: 20px;
+    width: 529.29px;
+    height:35.2px;
+    background-color: rgb(255,255,255);
+    padding: 3px 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+.srchbar #two i{
+    color:#222539;
+    width: 20px;
+    height:13px;
+}
+.srchbar #two input{
+    width:478px;
+    border:none;
+    outline:none;
+    background-color:rgb(255,255,255) ;
+}
+.srchbar #last #three span a{
+    color:var(--white);
+}
+.srchbar #four input{
+    background-color: rgb(255, 51, 0);
+    color:white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    height:29px;
+    width:66.99px;
+}
+.srchbar #last {
+    
+    display: flex;  
+    align-items: center; 
+}
+.srchbar #last div span a{
+    width:54px;
+    height: 18px;
+}
+.srchbar #last #four{
+    margin-left: 30px;
+    justify-content: space-evenly;
+}
+.srchbar #last #five{
+    margin-left: 21px;
+    width: 21.99px;
+    height:21.99px;
+}
+.collections{
+    background-color:var(--darkblue);
+    height:40px;
+    width:100%;
+    color:var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: small;
+}
+.collections .collect1{
+    margin-left: 34.44px;
+}
+.collections .collect1 a{
+    justify-content: space-between;
+    margin-left: 20px;
+}
+.collections .collect2{
+    padding: 30.44px;
+    margin-right: 2%;
+}
+.collections .collect2 a{
+    justify-content: space-between;
+    margin-left: 20px;
+}
+a:hover{
+    color:rgb(255,255,255);
+    text-shadow: rgba(220, 245, 228, 0.762);
+    text-decoration: solid;
+    transition: 0.3ms;
+    cursor: pointer;
+}
+/*body*/
+body{
+    background-color: rgb(245,245,245);
+}
+/*Carosal*/
+.slider{
+    margin-top: 10px;
+    width:100%;
+    height:fit-content;
+    overflow: hidden;
+}
+.slider .left-bt{
+    position: absolute;
+    top:35%;
+    background-color: grey;
+    height:30px;
+    width:30px;
+    left:-5px;
+    border-radius:4px;
+    justify-content: center;
+    opacity:60%;
+    padding: 0.4em;
+    cursor: pointer;
+    transform:translateY(calc(50%)) ;
+}
+.slider .right-bt{
+    position: absolute;
+    top:35%;
+    background-color: grey;
+    height:30px;
+    width:30px;
+    right:-5px;
+    border-radius:4px;
+    justify-content: center;
+    opacity:60%;
+    padding: 0.4em;
+    cursor: pointer;
+    transform:translateY(calc(50%)) ;
+}
+.slides{
+    width:1000px;
+    height: 300px;
+    display:flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 1155px;
+    transition: 0.4s;
+}
+.slide img{
+    width:1155px;
+    height:276px;
+    background:no-repeat;
+}
+.manual{
+    position: absolute;
+    width: 100%;
+    margin-top: -55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.manuals{
+    background-color: grey;
+    border: none;
+    padding:4px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 40%;
+}
+.manuals:not(:last-child){
+    margin-right: 10px;
+}
+.manuals:hover{
+    background-color: white;
+    opacity: 100%;
+}
+#radio1:checked ~ .first{
+    margin-right: 0px;
+}
+#radio2:checked ~ .first{
+    margin-left: -100%;
+}
+#radio3:checked ~ .first{
+    margin-left: -200%;
+}
+#radio4:checked ~ .first{
+    margin-left: -300%;
+}
+#radio5:checked ~ .first{
+    margin-left: -400%;
+}
+/*For Javascript Movement*/
+.auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 245px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.auto div{
+    background-color: grey;
+    border:none;
+    padding:4px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 100%;
+}
+.auto div:not(:last-child){
+    margin-right:10px;
+}
+#radio1:checked ~ .auto .auto1{
+    background-color: azure;
+}
+#radio2:checked ~ .auto .auto2{
+    background-color: azure;
+}
+#radio3:checked ~ .auto .auto3{
+    background-color: azure;
+}
+#radio4:checked ~ .auto .auto4{
+    background-color: azure;
+}
+#radio5:checked ~ .auto .auto5{
+    background-color: azure;
+}
+  
+/*Recommedned movies*/
+main{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.rmovie .verti{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .rmovie .verti a{
+    right: 0;
+}
+.rmovie .movies{
+    margin-top: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap:25px;
+}
+.rmovie .movies .movies-btn{
+    position: absolute;
+    background-color: rgb(112, 107, 107);
+    height:50px;
+    width:50px;
+    right:2%;
+    border-radius:100%;
+    justify-content: center;
+    opacity:50%;
+    padding: 18px 20px;
+    cursor: pointer;
+    transform:translateY(calc(50%)) ;
+}
+.rmovie .movies div{
+    width:187px;
+    height:317.81px;
+    align-items: center;
+}
+.rmovie .movies div img{
+    border-radius: 8px;
+    width:187px;
+    height:317.81px;
+}
+.rmovie .movies div h3{
+    font-family:'Arial Narrow';
+    margin-top: 5px;
+    font-weight:600;
+}
+.rmovie .movies div span{
+    padding-top: 25px;
+    color:grey;
+}
+section .vimage{
+    position: sticky;
+    margin-top: 12%;
+    column-gap: 30px;
+
+}
+section div img{
+    width:100%;
+    height:89px;
+}
+/*Life Events*/
+.life-events{
+    margin-top: 7%;
+}
+.life-events .events{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+}
+.life-events .events img{
+    width:200px;
+    height:200px;
+    border-radius: 8px;
+} 
+/*Premiere*/
+.premiere{
+    position: relative;
+    background-color: rgb(43,49,73);
+    height:fit-content;
+    width:100%;
+    margin-top: 50px;
+}
+.premiere .pre-heading{
+    margin-left: 5%;
+    color:var(--white);
+}
+.pre-heading img{
+    width:95%;
+}
+.premiere .pre-heading h3{
+    letter-spacing: 0.5px;
+    color:var(--white)
+} 
+.premiere .pre-heading p{
+    width: 100%;
+}  
+.premiere-collection{
+    margin-left: 5%;
+    margin-right:5%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+    color:var(--white);
+}
+.premiere .premiere-btn{
+    position: absolute;
+    top:50%;
+    background-color: rgb(225, 219, 219);
+    height:50px;
+    width:50px;
+    right:35px;
+    border-radius:100%;
+    justify-content: center;
+    opacity:60%;
+    padding: 20px 23px;
+    cursor: pointer;
+    transform:translateY(calc(50%)) ;
+}
+.premiere-collection div h3{
+    display: absolute;
+    width:187px;
+    font-size:medium;
+    padding-top:5px;
+    padding-bottom: 10px;
+}
+.premiere-collection div span{
+    padding: 40px 0px;
+}
+.premiere .premiere-collection img{
+    height:280px;
+    width: 187px;
+    border-radius: 8px;
+}
+/*Your Music Events*/
+.music{
+    position:relative;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.music .music-title{
+    padding: 15px 0px;
+}
+.music .music-title h3{
+    font-weight: bolder;
+    font-style: normal;
+}
+.music .music-events{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.music-events img{
+    width:187px;
+    height:280px;
+    border-radius: 8px;
+}
+.music-events span h4,p{
+    width:187px;
+    padding: 3px 0px;
+}
+.music-events span p{
+    color:grey;
+}
+/*Trending Searches*/
+#Trend{
+    margin-left: 5%;;
+}
+.trend-search{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.trend-search div{
+    background-color: rgb(255,255,255);
+    height: 50px;
+    justify-content: left;
+    width:fit-content;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+}
+.trend-search div h4{
+    color:red;
+    left:8px;
+}
+/*Footer*/
+footer{
+    width:100%;
+    height: fit-content;
+    background-color: rgb(49, 53, 59);
+}
+footer .bottom-page .first{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 30px 10px;
+    display: flex;
+    width:90%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .bottom-page p{
+    color:antiquewhite;
+    width:90%;
+}
+footer .bottom-page p span{
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: larger;
+    padding:50px 10px;
+}
+footer .bottom-page .first input{
+    background-color:rgb(236, 41, 41);
+    border-radius: 5px;
+    cursor: pointer;
+    border-color:rgb(236, 41, 41) ;
+    color:white;
+    padding:10px 10px;
+    width:10em;
+}
+.bottom-page .service{
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(88, 88, 88);
+    height:fit-content;
+    
+}
+.bottom-page .service div{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.bottom-page .service div i{
+    padding: 15px 50%;
+    color: azure;
+    font-size:x-large;
+    font-weight: bolder;
+}
+.bottom-page .countires{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:25px;
+}
+.bottom-page .help{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:25px;
+}
+.bottom-page .exclusive{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:25px;
+}
+.bottom-page .final-img{
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: -22px;
+}
+.socials{
+    display:flex;
+    flex-direction: row;
+    font-size: x-large;
+    justify-content: center;
+    padding:30px  10px;
+}
+.socials div{
+    padding: 0px 5px;
+}
+.cpyrht{
+    width:60%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.cpyrht .one{
+    margin-left: 45%;
+    margin-right: 45%;
+    color:black;
+}
+.cpyrht .two{
+    margin-left: 50%;
+    margin-right:50% ;
+    color: black;
+}
+.cpyrht .three{
+    margin-left: 60%;
+    margin-right: 50%;
+}
